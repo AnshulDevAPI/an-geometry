@@ -1,0 +1,24 @@
+cmake_minimum_required(VERSION 3.10)
+
+project(an-geometry VERSION 0.1 DESCRIPTION "an-geometry Open source library for computational geometry")
+
+add_library(angeometry SHARED
+    src/angeometry.cpp
+)
+
+set_target_properties(angeometry PROPERTIES VERSION ${PROJECT_VERSION})
+
+# set_target_properties(angeometry PROPERTIES SOVERSION 1)
+
+target_include_directories(angeometry PRIVATE includes)
+target_include_directories(angeometry PRIVATE src)
+
+set_target_properties(angeometry PROPERTIES PUBLIC_HEADER an/angeometry.h)
+
+
+
+# include(GNUInstallDirs)
+
+# install(TARGETS angeometry
+#     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
+#     PUBLIC_HEADER DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})
