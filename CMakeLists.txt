@@ -6,7 +6,7 @@ add_library(angeometry
     includes/angeometry.hpp
 )
 set_target_properties(angeometry PROPERTIES LINKER_LANGUAGE CXX)
-target_include_directories(angeometry PUBLIC includes)
+target_include_directories(angeometry PUBLIC includes )
 # target_include_directories(angeometry PRIVATE src)
 
 
